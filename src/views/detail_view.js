@@ -21,12 +21,11 @@ DetailView.prototype.buildElement = function (type, src) {
 DetailView.prototype.render = function (images) {
   const infoParagraph = document.querySelector('#info-container');
 
+this.container.innerHTML = "";
+
   images.forEach((image) => {
     const imageItem = this.buildElement('img', image.img_src);
-    console.log(imageItem);
     infoParagraph.appendChild(imageItem);
   });
-
-  this.container.innerHTML = "";
-}
+};
 module.exports = DetailView;

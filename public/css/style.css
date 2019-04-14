@@ -1,0 +1,30 @@
+#form {
+  width: 30%;
+  float: left;
+  height: 240px;
+}
+
+table {
+  max-width: 70%;
+  float: left;
+  border-collapse: collapse;
+}
+
+h1 {
+  text-align: : center;
+  background-color: #0B3D91;
+  height: 60px;
+  color: #FC3D21;
+}
+
+table {
+  border: 1px black solid;
+}
+
+table tr:nth-child(odd){
+  background: #b8d1f3;
+}
+
+table td{
+  border: 1px solid #dae5f4;
+}
