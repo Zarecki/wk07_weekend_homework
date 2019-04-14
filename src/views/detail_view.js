@@ -7,7 +7,7 @@ const DetailView = function (container) {
 
 DetailView.prototype.bindEvents = function () {
   PubSub.subscribe('Rovers:selected-image', (evt) => {
-    const images = evt;
+    const images = evt.detail;
     this.render(images);
   });
 };
@@ -22,7 +22,8 @@ DetailView.prototype.render = function (images) {
   const infoParagraph = document.querySelector('#info-container');
 
   images.forEach((image) => {
-    const imageItem = this.buildElement('img', image);
+    const imageItem = this.buildElement('img', image.img_src);
+    console.log(imageItem);
     infoParagraph.appendChild(imageItem);
   });
 

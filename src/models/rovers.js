@@ -19,8 +19,8 @@ Rovers.prototype.getData = function (evt) {
   const request = new Request(url);
   request.get().then((roverImageData) => {
     // console.log(roverImageData);
-    this.data = this.handleDataReady(roverImageData);
-    PubSub.publish('Rovers:selected-image', this.handleDataReady(roverImageData));
+    // this.data = this.handleDataReady(roverImageData);
+    PubSub.publish('Rovers:selected-image', roverImageData.photos);
   })
   .catch((err) => {
     PubSub.publish('Rovers:error', err);
@@ -32,27 +32,24 @@ Rovers.prototype.getData = function (evt) {
 //   this.modelRover(rover, roverDetails);
 // };
 
-Rovers.prototype.handleDataReady = function (roverImageData) {
-  const roverImages = this.getRoverImage(roverImageData);
-  console.log(roverImages);
-  return roverImages;
-  // this.modelImage(roverImageData, roverImages);
-};
-
-Rovers.prototype.getRoverImage = function (roverImageData) {
-  // console.log(roverImageData.photos);
-  const images = roverImageData.photos.reduce((sum, x) => {
-        sum.push.apply(sum, x.img_src);
-        return sum;
-      },[]);
-
+// Rovers.prototype.handleDataReady = function (roverImageData) {
+//   const roverImages = this.getRoverImage(roverImageData);
+//   console.log(roverImages);
+//   return roverImages;
+//   // this.modelImage(roverImageData, roverImages);
+// };
+//
+// Rovers.prototype.getRoverImage = function (roverImageData) {
+//   console.log(roverImageData.photos);
+//   const images = roverImageData.photos;
+//   images.forEach();
 
 
   // console.log(roverImageData);
   // return roverImageData
   // .map(roverImageData => roverImageData.img_src)
   // .filter((image, index, images) => images.indexOf(image) === index);
-};
+// };
 
 // Rovers.prototype.modelImage = function (roverImageData, roverImages) {
 //   this.data = roverImages.map((roverImage) => {

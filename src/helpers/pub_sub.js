@@ -1,6 +1,5 @@
 const PubSub = {
   publish: function (channel, payload) {
-    console.log('Rovers:selected-image', payload);
     const event = new CustomEvent(channel, {
       detail: payload
     });
