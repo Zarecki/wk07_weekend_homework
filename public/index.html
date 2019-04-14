@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mars Rovers</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bundle.js">
+    </script>
+  </head>
+  <body>
+
+    <h1>Mars Rovers</h1>
+
+    <form id="form">
+      <select id="rovers-container">
+        <option selected disabled>Select rover</option>
+        <option id="curiosity" value="curiosity">Curiosity</option>
+        <option id="opportunity" value="opportunity">Opportunity</option>
+        <option id="spirit" value="spirit">Spirit</option>
+      </select><br>
+      <select id="cameras-container">
+        <option selected disabled>Select camera</option>
+        <option id="fhaz" value="fhaz">FHAZ</option>
+        <option id="rhaz" value="rhaz">RHAZ</option>
+        <option id="mast" value="mast">MAST</option>
+        <option id="chemcam" value="chemcam">CHEMCAM</option>
+        <option id="mahli" value="mahli">MAHLI</option>
+        <option id="mardi" value="mardi">MARDI</option>
+        <option id="navcam" value="navcam">NAVCAM</option>
+        <option id="pancam" value="pancam">PANCAM</option>
+        <option id="minites" value="minites">MINITES</option>
+      </select><br>
+      <label for="sol-selection">Martian Solar Day (30 - 1000)</label><br>
+      <input type="number" id="sol-selection" min="30" max="1000"><br>
+      <input type="submit" value="Submit"/>
+    </form>
+
+    <div id="info-container">
+
+    </div>
+
+  </body>
+</html>
